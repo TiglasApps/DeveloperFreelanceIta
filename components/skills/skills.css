@@ -1,0 +1,122 @@
+/* Technical Proficiencies Section - STEM Academic Style */
+.skills-section {
+  padding: var(--spacing-2xl) 0;
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+.skills-section__header {
+  margin-bottom: var(--spacing-xl);
+  max-width: 800px;
+}
+
+.skills-section__title {
+  font-size: 2.5rem;
+  font-family: var(--font-family-serif);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.skills-section__title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--bitcoin-orange);
+  margin-top: var(--spacing-xs);
+}
+
+.skills-section__subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Proficiency Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.skill-card {
+  padding: var(--spacing-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.skill-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.skill-card__dot {
+  width: 8px;
+  height: 8px;
+  background: var(--bitcoin-orange);
+}
+
+.skill-card__title {
+  font-family: var(--font-family-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.skill-card__list {
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Stats Footer */
+.skills-stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-xl);
+}
+
+.skills-stat {
+  flex: 1;
+}
+
+.skills-stat__number {
+  font-size: 2.5rem;
+  font-family: var(--font-family-serif);
+  font-weight: 700;
+  color: var(--bitcoin-orange);
+  margin-bottom: 0;
+}
+
+.skills-stat__label {
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-stats {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering | R&D of Complex Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=IBM+Plex+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="components/header/header.css">
+    <link rel="stylesheet" href="components/hero/hero.css">
+    <link rel="stylesheet" href="components/skills/skills.css">
+    <link rel="stylesheet" href="components/theme-toggle/theme-toggle.css">
+</head>
+
+<body>
+    <!-- Header Component -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <div class="logo__box">AG</div>
+                    <span class="logo__text">Engineering</span>
+                </div>
+                <nav class="nav" id="nav-menu">
+                    <ul class="nav__list">
+                        <li><a href="#home" class="nav__link">Home</a></li>
+                        <li><a href="#expertise" class="nav__link">Expertise</a></li>
+                        <li><a href="#projects" class="nav__link">Projects</a></li>
+                        <li><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <!-- Theme Toggle Component -->
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                        <span class="theme-toggle__label theme-toggle__label--light">Light</span>
+                        <span class="theme-toggle__slider"></span>
+                        <span class="theme-toggle__label theme-toggle__label--dark">Dark</span>
+                    </button>
+                    <!-- Hamburger Menu Button -->
+                    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+                        <span class="nav-toggle__bar"></span>
+                        <span class="nav-toggle__bar"></span>
+                        <span class="nav-toggle__bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__background">
+                <div class="hero__grid"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <p class="hero__subtitle">+9 Years of Applied Engineering</p>
+                        <h1 class="hero__title">
+                            Freelance Engineering <br>
+                            <span class="hero__title--accent">Web, Apps & AI Systems</span>
+                        </h1>
+                        <div class="hero__description">
+                            <p>Over 9 years of experience in designing custom digital products. From creating modern
+                                websites to developing complex server architectures and cutting-edge AI solutions.</p>
+                        </div>
+                        <div class="hero__cta">
+                            <a href="mailto:alessandro21@gmail.com?subject=PROJECT%20COLLABORATION%20REQUEST&body=Briefly%20introduce%20yourself%20and%20what%20you%20want%20to%20achieve"
+                                class="btn btn--primary" id="cta-primary">Consultancy Request</a>
+                        </div>
+                    </div>
+
+                    <div class="hero__visual">
+                        <div class="hero__abstract-shape">
+                            <canvas id="hero-viz" class="hero__canvas"></canvas>
+                            <div class="hero__stats-overlay">
+                                <div class="hero__stat-item">SYS_STABILITY: 99.99%</div>
+                                <div class="hero__stat-item">LATENCY_CORE: &lt; 12ms</div>
+                                <div class="hero__stat-item">MTTR_INDEX: 1.4h</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Expertise -->
+        <section class="skills-section" id="expertise">
+            <div class="container">
+                <div class="skills-section__header">
+                    <h2 class="skills-section__title">Technical Proficiency & R&D Domains</h2>
+                    <p class="skills-section__subtitle">
+                        A methodological approach based on computer science foundations and technological edge, with a
+                        core focus on security and business logic.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-card__header">
+                            <div class="skill-card__dot"></div>
+                            <h3 class="skill-card__title">Artificial Intelligence</h3>
+                        </div>
+                        <ul class="skill-card__list">
+                            <li>Advanced RAG Solutions</li>
+                            <li>AI API Integration</li>
+                            <li>Embedded AI Systems</li>
+                            <li>Machine Learning Ops</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__header">
+                            <div class="skill-card__dot"></div>
+                            <h3 class="skill-card__title">Sistemi Cross-Platform</h3>
+                        </div>
+                        <ul class="skill-card__list">
+                            <li>Native Mobile Development</li>
+                            <li>Desktop Architectures</li>
+                            <li>Cross-Platform Solutions</li>
+                            <li>High-Performance Interfaces</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__header">
+                            <div class="skill-card__dot"></div>
+                            <h3 class="skill-card__title">Infrastructure & Cloud</h3>
+                        </div>
+                        <ul class="skill-card__list">
+                            <li>Complex Server Solutions</li>
+                            <li>System Security</li>
+                            <li>Scalable Microservices</li>
+                            <li>DevOps & CI/CD</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__header">
+                            <div class="skill-card__dot"></div>
+                            <h3 class="skill-card__title">Core Engineering</h3>
+                        </div>
+                        <ul class="skill-card__list">
+                            <li>Business Logic Design</li>
+                            <li>E-commerce Solutions</li>
+                            <li>Optimization Algorithms</li>
+                            <li>Data Consistency</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Client Vision Section -->
+        <section class="narrative-section" id="projects">
+            <div class="container">
+                <div class="narrative-grid">
+                    <div class="narrative-content">
+                        <h2 class="narrative-title">From Idea to Architecture</h2>
+                        <div class="narrative-story">
+                            <p>
+                                You have a project waiting to be realized. An idea that requires solidity, scalability,
+                                and an engineering vision that allows for no approximations.
+                            </p>
+                            <p>
+                                Whether it's a <strong>startup</strong> that needs to scale fast, an
+                                <strong>e-commerce</strong> that must handle global traffic peaks, or an
+                                <strong>Artificial Intelligence</strong> integration in your business workflow, my job
+                                is to build the foundations your success will stand on.
+                            </p>
+                            <p>
+                                I don't just sell code. I build the engine that will allow your vision to run fast,
+                                secure, and without boundaries.
+                            </p>
+                        </div>
+                        <div class="narrative-cta">
+                            <a href="mailto:alessandro21@gmail.com?subject=PROJECT%20COLLABORATION%20REQUEST&body=Briefly%20introduce%20yourself%20and%20what%20you%20want%20to%20achieve"
+                                class="btn btn--secondary">Start Designing</a>
+                        </div>
+                    </div>
+                    <div class="narrative-visual">
+                        <div class="architectural-blueprint">
+                            <div class="blueprint-grid"></div>
+                            <div class="blueprint-ticker">
+                                <div class="ticker-track">
+                                    <span>App Android</span>
+                                    <span>App iOS</span>
+                                    <span>Cross-Platform</span>
+                                    <span>Web Pages</span>
+                                    <span>E-commerce</span>
+                                    <span>Cloud Systems</span>
+                                    <span>AI Integrations</span>
+                                    <span>RAG Solutions</span>
+                                    <span>Automation</span>
+                                    <span>Server Systems</span>
+                                    <span>Business Logic</span>
+                                    <span>Logic Validation</span>
+                                    <span>API Hardening</span>
+                                    <span>Embedded Systems</span>
+                                    <span>API Design</span>
+                                    <span>Data Pipelines</span>
+                                    <span>Legacy Modernization</span>
+                                    <!-- Repeat first item for seamless loop -->
+                                    <span>App Android</span>
+                                </div>
+                            </div>
+                            <div class="blueprint-labels">
+                                <span>Whatever the challenge, the architecture is ready.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partner Engagement & Pricing -->
+        <section class="pricing-section" id="pricing">
+            <div class="container">
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-card__header">
+                            <h2 class="pricing-card__title">Collaboration Model</h2>
+                            <p class="pricing-card__subtitle">Integrity, Transparency & Security</p>
+                        </div>
+                        <div class="pricing-card__body">
+                            <p>Every project is approached with a rigorous engineering method. Code security and
+                                business logic consistency are the absolute priorities.</p>
+                            <div class="pricing-range">
+                                <div class="pricing-range__label">Project Investment</div>
+                                <div class="pricing-range__value">€2,000 — €40,000</div>
+                                <div class="pricing-range__note">+ Italian Taxes | Personalized quotes based on system
+                                    complexity</div>
+                            </div>
+                        </div>
+                        <div class="pricing-card__footer">
+                            <a href="mailto:alessandro21@gmail.com?subject=PROJECT%20COLLABORATION%20REQUEST&body=Briefly%20introduce%20yourself%20and%20what%20you%20want%20to%20achieve"
+                                class="btn btn--primary" style="width: 100%;">Start a Collaboration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script src="js/system-viz.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
