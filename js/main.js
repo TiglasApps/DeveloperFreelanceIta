@@ -49,19 +49,33 @@ class App {
     const navLinks = document.querySelectorAll('.nav__link');
 
     if (navToggle && navMenu) {
+      const closeMenu = () => {
+        navToggle.classList.remove('nav-toggle--active');
+        navMenu.classList.remove('nav--active');
+        document.body.style.overflow = '';
+      };
+
       navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.contains('nav--active');
         navToggle.classList.toggle('nav-toggle--active');
         navMenu.classList.toggle('nav--active');
-        document.body.style.overflow = navMenu.classList.contains('nav--active') ? 'hidden' : '';
+        document.body.style.overflow = !isOpen ? 'hidden' : '';
       });
 
       // Close menu when clicking a link
       navLinks.forEach(link => {
         link.addEventListener('click', () => {
-          navToggle.classList.remove('nav-toggle--active');
-          navMenu.classList.remove('nav--active');
-          document.body.style.overflow = '';
+          // Add a tiny delay to ensure smooth scroll starts before menu closes
+          // and layout potentially shifts
+          setTimeout(closeMenu, 100);
         });
+      });
+
+      // Close menu on resize if it's open and we go to desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 992 && navMenu.classList.contains('nav--active')) {
+          closeMenu();
+        }
       });
     }
   }
