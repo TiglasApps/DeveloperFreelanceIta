@@ -28,6 +28,9 @@ class App {
       });
     });
 
+    // Handle mailto links for mobile webview compatibility
+    this.setupMailToLinks();
+
     // Header scroll effect
     this.setupHeaderScroll();
 
@@ -41,6 +44,57 @@ class App {
     window.addEventListener('themeChanged', (e) => {
       console.log(`Theme changed to: ${e.detail.theme}`);
     });
+  }
+
+  setupMailToLinks() {
+    const mailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    const email = 'alessandro21@gmail.com';
+
+    mailLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Copy to clipboard as fallback
+        this.copyToClipboard(email);
+        
+        // Show notification
+        this.showToast('Email copied! If the app doesn\'t open, paste it manually.');
+        
+        // Let the default behavior continue (trying to open the mail app)
+        // We don't preventDefault() here so it still tries to open the app
+      });
+    });
+  }
+
+  copyToClipboard(text) {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  }
+
+  showToast(message) {
+    // Remove existing toast if any
+    const existingToast = document.querySelector('.toast');
+    if (existingToast) existingToast.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `
+      <div class="toast__icon"></div>
+      <div class="toast__message">${message}</div>
+    `;
+
+    document.body.appendChild(toast);
+
+    // Fade in
+    setTimeout(() => toast.classList.add('toast--active'), 100);
+
+    // Fade out and remove
+    setTimeout(() => {
+      toast.classList.remove('toast--active');
+      setTimeout(() => toast.remove(), 400);
+    }, 4000);
   }
 
   setupMobileNav() {
