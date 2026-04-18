@@ -129,8 +129,13 @@
     min-height: auto;
     padding-bottom: var(--spacing-2xl);
   }
+
+  .hero__text {
+    padding-left: var(--spacing-md);
+  }
   
   .hero__visual {
     display: none;
   }
 }
+

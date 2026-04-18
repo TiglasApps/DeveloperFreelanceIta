@@ -216,6 +216,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   user-select: none;
   pointer-events: none;
+  z-index: 2;
+  flex-shrink: 0;
 }
 
 .ticker-track {
@@ -236,6 +238,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--border-color);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
 @keyframes tickerSlide {
@@ -360,6 +363,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .narrative-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .narrative-title {
+    font-size: 2.2rem;
+  }
+
+  .narrative-visual {
+    height: auto;
+    min-height: 350px;
+    margin-top: var(--spacing-lg);
+  }
+
+  .architectural-blueprint {
+    position: relative;
+    padding: var(--spacing-md);
+  }
+
+  .pricing-card {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .pricing-range__value {
+    font-size: 1.75rem;
+  }
+
   .toast {
     width: calc(100% - 2rem);
     bottom: 1rem;
@@ -367,3 +402,4 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.7rem;
   }
 }
+
